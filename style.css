@@ -55,3 +55,134 @@ header ul a:hover {
 
 
 /* fine header */
+
+main {
+    padding-top: calc(76px + 60px)
+}
+
+.container{
+    display: flex;
+    max-width: ;
+
+}
+
+#cards-container {
+    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px 20px;
+}
+
+#cards-container .colonna {
+
+/* uso il calc per posizionare meglio le colonne*/
+    width: calc(100% / 3 - 20px / 3 * 2);
+
+}
+
+/* do questi valori di padding per evitare lo spazio che si crea sia a destra che a sinistra della prima e terza colonna*/
+
+
+#cards-container .colonna:nth-of-type(3n + 1) {
+    padding-left: 0;
+}
+
+#cards-container .colonna:nth-of-type(3n) {
+    padding-right: 0;
+}
+
+
+#cards-container .colonna .cololonna-inner {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+/*fine valori di padding*/
+
+/*Immagini con Hoover */
+
+
+#cards-container .colonna .colonna-img img {
+    width: 100%;
+    height: auto;
+}
+
+
+#cards-container .colonna .colonna-img img:nth-of-type(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s;   
+}
+
+#cards-container .colonna .colonna-inner:hover .colonna-img img:nth-of-type(2) {
+    opacity: 1;
+}
+
+/* fine immagini con Hoover */
+
+
+
+
+#cards-container .colonna .colonna-text .brand {
+    font-size: .9em;
+}
+
+#cards-container .colonna .colonna-text .modello {
+    text-transform: uppercase;
+}
+
+#cards-container .colonna .colonna-text .prezzo {
+    display: flex;
+    gap: 6px;
+}
+
+#cards-container .colonna .colonna-text .prezzo .nuovo-prezzo {
+    color: red;
+}
+#cards-container .colonna .colonna-text .prezzo .vecchio-prezzo {
+    text-decoration: line-through;
+}
+
+
+#cards-container .colonna .colonna-inner .tags {
+    display: flex;
+    gap: 4px;
+    position: absolute;
+    bottom: 100px;
+}
+
+#cards-container .colonna .colonna-inner .tags .tag {
+    padding: 6px 10px;
+
+    font-size: .8em;
+    font-weight: bold;
+    color: white;
+}
+
+#cards-container .colonna .colonna-inner .tags .tag.red {
+    background-color: red;
+}
+#cards-container .colonna .colonna-inner .tags .tag.green {
+    background-color: green;
+}
+
+
+#cards-container .colonna .colonna-inner .preferiti {
+    position: absolute;
+    top: 10px;
+    right: 0;
+
+    padding: 16px;
+
+    background-color: white;
+
+    transition: color .3s;
+}
+
+#cards-container .colonna .colonna-inner .preferiti:hover {
+    color: red;
+}
